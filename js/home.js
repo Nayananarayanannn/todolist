@@ -1,4 +1,5 @@
 var count=0;
+var id=0;
 date(); 
 
 // -----------------------------AJAX call for todo list------------------------------
@@ -127,9 +128,9 @@ function add(){
   cell2.classList.add("items");
   
   
-  cell1.innerHTML = `<i onclick="completed(${id})" class="far fa-square check" id="checkIcon${id}" ></i>`;
+  cell1.innerHTML = `<i onclick="completed(${id})"  onmouseover="highlight(${id})" onmouseout="normal(${id})" class="far fa-square check" id="checkIcon${id}" ></i>`;
   cell2.innerHTML = input;
-  cell3.innerHTML = `<i onclick="deleted(${id})"class="far fa-trash-alt" id="delete${id}" class="delete"></i>`;
+  cell3.innerHTML = `<i onclick="deleted(${id})" onmouseover="highlight(${id})" onmouseout="normal(${id})" class="far fa-trash-alt" id="delete${id}" class="delete"></i>`;
   var rows=document.querySelectorAll("tr");
   var newRow=rows[1]
   newRow.setAttribute("id",`check${id}`)
