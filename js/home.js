@@ -81,8 +81,10 @@ function completed(id){
     document.getElementById(`check${id}`).style.textDecoration="line-through";
      checked.classList.remove("fa-square");
     checked.classList.add("fa-check-square");
-    count++
-    if(count==5){
+    count++;
+    console.log(count);
+    var length=document.getElementsByClassName("fa-check-square").length;
+    if(count==5||length==5){
       swal("Congrats!Achieved today's goal",`5 Tasks have been Successfully Completed` , "success");
       
     }
