@@ -84,7 +84,7 @@ function completed(id){
     count++;
     console.log(count);
     var length=document.getElementsByClassName("fa-check-square").length;
-    if(count==5||length==5){
+    if(length==5){
       swal("Congrats!Achieved today's goal",`5 Tasks have been Successfully Completed` , "success");
       
     }
